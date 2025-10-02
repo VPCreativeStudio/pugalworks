@@ -1,0 +1,58 @@
+import styles from "./logo.module.scss";
+
+function Logo() {
+  return (
+    <div className={styles["logo"]}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="64"
+        height="64"
+        viewBox="0 0 64 64"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_862_10023)">
+          <mask
+            id="mask0_862_10023"
+            style={{ maskType: "luminance" }}
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="64"
+            height="64"
+          >
+            <path d="M64 0H0V64H64V0Z" fill="white" />
+          </mask>
+          <g mask="url(#mask0_862_10023)">
+            <mask
+              id="mask1_862_10023"
+              style={{ maskType: "luminance" }}
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="64"
+              height="64"
+            >
+              <path d="M64 0H0V64H64V0Z" fill="white" />
+            </mask>
+            <g mask="url(#mask1_862_10023)">
+              <path
+                d="M0 7.98926L27.9636 56.2506H36.1689L63.9156 7.98926H55.9262L32.0667 48.7999L8.09867 7.98926H0Z"
+                fill="#D3F36B"
+              />
+              <path
+                d="M11.1216 7.98926H36.3847L31.8576 15.8693H15.6487L11.1216 7.98926Z"
+                fill="#D3F36B"
+              />
+              <path
+                d="M39.7313 7.98926H47.1882L32.1811 34.6559H23.9678L39.7313 7.98926Z"
+                fill="#D3F36B"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+export default Logo;

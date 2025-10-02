@@ -1,0 +1,56 @@
+@use "./mixin.scss" as *;
+@use "./variable.scss" as *;
+@use "./root.scss" as *;
+
+body {
+  margin: 0;
+  background-color: var(--fontClr-w);
+  color: var(--fontClr);
+  overflow: hidden;
+  overflow-y: auto;
+  font-family: var(--regularFt);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  user-select: none;
+  padding: var(--sectionPd);
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  width: 0.25rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0.25rem;
+  background-color: var(--primaryClr);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 0.25rem;
+  background-color: var(--primaryClr);
+}
+
+section {
+  padding: var(--sectionPd) 0;
+  @include rel-position;
+}
+
+.icon {
+  @include transition(all 0.3s);
+  @include flex-element;
+  @include transform-origin(center);
+
+  &::before {
+    content: "";
+    @include transition(all 0.3s);
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+  }
+}
