@@ -1,3 +1,15 @@
+@use "/src/assets/scss/mixin.scss" as *;
+
 .header {
-  margin: 0;
+  @include flex-element;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  border-radius: var(--rd-64);
+  @include fixed-position;
+  top: 0.5rem;
+  width: min(var(--maxWidth), 100% - var(--sectionPd));
+  @include left-center;
+  z-index: 100;
+  background-color: var(--blackClr);
 }

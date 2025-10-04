@@ -1,0 +1,46 @@
+:root {
+  --primaryClr: hsl(74, 85%, 69%);
+  --whiteClr: hsl(0, 0%, 100%);
+  --blackClr: hsl(0, 0%, 0%);
+  --secondaryClr: hsl(0, 0%, 42%);
+  --inputClr: hsl(0, 0%, 25%);
+  --cardClr: hsl(0, 0%, 92%);
+  --bgClr: hsl(0, 0%, 96%);
+
+  --ft-12: 0.75rem;
+  --ft-14: 0.875rem;
+  --ft-16: 1rem;
+  --ft-18: 1.125rem;
+  --ft-20: 1.25rem;
+  --ft-24: 1.5rem;
+  --ft-30: 1.875rem;
+  --ft-32: 2rem;
+  --ft-64: 4rem;
+
+  --rd-8: 0.5rem;
+  --rd-12: 0.75rem;
+  --rd-16: 1rem;
+  --rd-20: 1.25rem;
+  --rd-24: 1.5rem;
+  --rd-32: 2rem;
+  --rd-64: 4rem;
+
+  --sectionPd: 4rem;
+  --sectionPdMob: 2rem;
+
+  --transition: all 0.3s ease;
+
+  --fontBold: boldFont;
+  --fontSemi: semiFont;
+  --fontMedium: mediumFont;
+  --fontRegular: regularFont;
+  --fontLight: lightFont;
+  --fontPrimary: primaryFont;
+  --fontHdMedium: headingMediumFont;
+  --fontHdSemi: headingSemiFont;
+  --fontHdBold: headingBoldFont;
+
+  --cardShadow: hsla(0, 0%, 0%, 0.12) 0px 4px 12px;
+
+  --maxWidth: 1280px;
+}

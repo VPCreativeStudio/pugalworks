@@ -1,4 +1,4 @@
-@use "./variable.scss" as *;
+@use "/src/assets/scss/variable.scss" as *;
 
 // Position
 @mixin rel-position {
@@ -111,16 +111,20 @@
   @include transform(translate(-50%, -50%));
 }
 
-@mixin top-center {
+@mixin top-pos {
   @include abs-position;
   top: 50%;
   @include transform(translateY(-50%));
 }
 
 @mixin left-center {
-  @include abs-position;
   left: 50%;
   @include transform(translateX(-50%));
+}
+
+@mixin left-pos {
+  @include abs-position;
+  @include left-center;
 }
 
 // Transition

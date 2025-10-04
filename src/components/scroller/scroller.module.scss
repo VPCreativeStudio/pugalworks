@@ -1,0 +1,19 @@
+@use "/src/assets/scss/mixin.scss" as *;
+
+.scrollerContainer {
+  @include rel-position;
+  padding: 0.5rem 0;
+  background: var(--primaryClr);
+
+  ul {
+    @include flex-element;
+    gap: 2rem;
+
+    span {
+      font-size: var(--ft-32);
+      line-height: calc(var(--ft-32) * 1.4);
+      width: max-content;
+      @include block-element;
+    }
+  }
+}

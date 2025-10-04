@@ -20,7 +20,7 @@ function Hero() {
         modePrimary="light"
         typeSecondary="primary"
         labelSecondary="Join Squad"
-        modeSecondary="drak"
+        modeSecondary="dark"
       />
     </div>
   );

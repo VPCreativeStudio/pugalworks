@@ -5,10 +5,12 @@ function Card({ Heading, SubHeading, Count, content }) {
   return (
     <div className={styles["serviceCard"]}>
       <div className={styles["serviceHeader"]}>
-        <h6>{Count}</h6>
         <div className={styles["serviceHeading"]}>
-          <h4>{SubHeading}</h4>
-          <h2>{Heading}</h2>
+          <h6>{Count}</h6>
+          <div className={styles["serviceContent"]}>
+            <h4>{SubHeading}</h4>
+            <h2>{Heading}</h2>
+          </div>
         </div>
         <ButtonGroup
           typePrimary="primary"
@@ -16,7 +18,7 @@ function Card({ Heading, SubHeading, Count, content }) {
           modePrimary="light"
           typeSecondary="primary"
           labelSecondary="Discuss"
-          modeSecondary="drak"
+          modeSecondary="dark"
         />
       </div>
       <div className={styles["serviceBody"]}>

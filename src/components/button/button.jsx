@@ -2,9 +2,11 @@ import styles from "./button.module.scss";
 
 function Button({ type, Label, mode }) {
   return (
-    <button className={`${styles["btn"]} ${styles[type]}  ${styles[mode]}`}>
-      {Label}
-    </button>
+    <div className={styles["btn-wrapper"]}>
+      <button className={`${styles["btn"]}`} data-type={type} data-mode={mode}>
+        {Label}
+      </button>
+    </div>
   );
 }
 

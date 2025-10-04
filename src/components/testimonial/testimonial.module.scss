@@ -1,0 +1,7 @@
+@use "/src/assets/scss/mixin.scss" as *;
+
+.testimonialCard {
+  background: var(--cardClr);
+  padding: 1.5rem;
+  border-radius: var(--rd-24);
+}

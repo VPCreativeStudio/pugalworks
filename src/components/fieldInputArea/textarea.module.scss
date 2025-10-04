@@ -1,3 +1,31 @@
+@use "/src/assets/scss/mixin.scss" as *;
+
 .inputform {
-  margin: 0;
+  @include flex-element;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .inputControl {
+    @include rel-position;
+
+    input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--inputClr);
+      border-radius: var(--rd-16);
+      background: var(--inputClr);
+      color: var(--whiteClr);
+      font-size: var(--ft-16);
+      outline: none;
+      @include transition(border 0.3s ease);
+
+      &:focus {
+        border-color: var(--primaryClr);
+      }
+    }
+  }
+  label,
+  span {
+    color: var(--primaryClr);
+  }
 }

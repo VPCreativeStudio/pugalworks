@@ -1,0 +1,13 @@
+@use "/src/assets/scss/mixin.scss" as *;
+@use "/src/assets/scss/root.scss" as *;
+
+.navigation {
+  @include flex-element;
+  align-items: center;
+  gap: 1rem;
+
+  .nav-item {
+    padding: 0.25rem 0.5rem;
+    color: var(--whiteClr);
+  }
+}

@@ -1,19 +1,19 @@
 @use "./mixin.scss" as *;
 @use "./variable.scss" as *;
 @use "./root.scss" as *;
+@use "./reset.scss" as *;
 
 body {
   margin: 0;
-  background-color: var(--fontClr-w);
-  color: var(--fontClr);
+  background-color: var(--bgClr);
+  color: var(--blackClr);
   overflow: hidden;
   overflow-y: auto;
-  font-family: var(--regularFt);
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-family: var(--fontRegular), sans-serif;
+  font-size: var(--ft-16);
+  line-height: calc(var(--ft-16) * 1.4);
   user-select: none;
-  padding: var(--sectionPd);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 ::-webkit-scrollbar {
@@ -38,17 +38,18 @@ body {
 section {
   padding: var(--sectionPd) 0;
   @include rel-position;
+  // width: min(var(--maxWidth), 100% - var(--sectionPd));
 }
 
 .icon {
-  @include transition(all 0.3s);
   @include flex-element;
   @include transform-origin(center);
+  transition: var(--transition);
 
   &::before {
     content: "";
-    @include transition(all 0.3s);
-    display: inline-block;
+    @include inline-block-element;
+    transition: var(--transition);
     width: 3rem;
     height: 3rem;
     vertical-align: middle;

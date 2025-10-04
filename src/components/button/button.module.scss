@@ -1,3 +1,36 @@
-.btn {
-  margin: 0;
+@use "/src/assets/scss/mixin.scss" as *;
+
+.btn-wrapper {
+  @include rel-position;
+  .btn {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: var(--rd-32);
+    font-size: var(--ft-14);
+    line-height: calc(var(--ft-14) * 1.4);
+    font-family: var(--fontSemiBold), sans-serif;
+    color: var(--blackClr);
+    border: 1px solid transparent;
+
+    &[data-type="primary"] {
+      &[data-mode="dark"] {
+        background-color: var(--blackClr);
+        color: var(--whiteClr);
+      }
+      &[data-mode="light"] {
+        background-color: var(--primaryClr);
+      }
+    }
+
+    &[data-type="secondary"] {
+      &[data-mode="dark"] {
+        border-color: var(--blackClr);
+        color: var(--blackClr);
+      }
+      &[data-mode="light"] {
+        border-color: var(--primaryClr);
+        color: var(--primaryClr);
+      }
+    }
+  }
 }

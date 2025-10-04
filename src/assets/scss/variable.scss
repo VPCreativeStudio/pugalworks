@@ -1,29 +1,44 @@
 @font-face {
   font-family: primaryFont;
-  src: url(../src/assets/fonts/Michroma-Regular.ttf);
+  src: url(/src/assets/fonts/Lora-Bold.ttf);
 }
 
 @font-face {
   font-family: regularFont;
-  src: url(../src/assets/fonts/Poppins-Regular.ttf);
+  src: url(/src/assets/fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: mediumFont;
-  src: url(../src/assets/fonts/Poppins-Medium.ttf);
+  src: url(/src/assets/fonts/Roboto-Medium.ttf);
 }
 
 @font-face {
   font-family: semiFont;
-  src: url(../src/assets/fonts/Poppins-SemiBold.ttf);
+  src: url(/src/assets/fonts/Roboto-SemiBold.ttf);
 }
 
 @font-face {
   font-family: lightFont;
-  src: url(../src/assets/fonts/Poppins-Light.ttf);
+  src: url(/src/assets/fonts/Roboto-Light.ttf);
 }
 
 @font-face {
   font-family: boldFont;
-  src: url(../src/assets/fonts/Poppins-Bold.ttf);
+  src: url(/src/assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: headingMediumFont;
+  src: url(/src/assets/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: headingSemiFont;
+  src: url(/src/assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: headingBoldFont;
+  src: url(/src/assets/fonts/Montserrat-Bold.ttf);
 }

@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+@use "/src/assets/scss/mixin.scss" as *;
+@use "/src/assets/scss/root.scss" as *;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+section {
+  padding: var(--sectionPd);
+  @include rel-position;
+  margin: auto;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  &.heroSection,
+  &.whyusSection,
+  &.teamSection,
+  &.contactSection {
+    background: var(--blackClr);
+    color: var(--whiteClr);
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  &.heroSection {
+    @include grid-element;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+  }
+
+  &.projectSection {
+    @include flex-element;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }
 
-.card {
-  padding: 2em;
+.serviceCardWrapper,
+.projectContainer {
+  @include grid-element;
+  gap: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.projectContainer {
+  margin-bottom: 1rem;
+}
+
+.whyus-container {
+  @include flex-element;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.joinus-container {
+  @include grid-element;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  .projectidea-container {
+    @include flex-element;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background: var(--primaryClr);
+    padding: 1.5rem;
+    color: var(--blackClr);
+    gap: 1rem;
+    border-radius: var(--rd-24);
+
+    .projectidea-content {
+      @include flex-element;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    h6 {
+      font-size: var(--ft-20);
+      line-height: calc(var(--ft-20) * 1.4);
+    }
+
+    p {
+      font-size: var(--ft-14);
+      line-height: calc(var(--ft-14) * 1.4);
+    }
+  }
+
+  .joinform-container {
+    .two-grid {
+      @include grid-element;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.testimonialContainer {
+  @include grid-element;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footerContainer {
+  @include grid-element;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.whyus-container,
+.projectContainer,
+.testimonialContainer {
+  width: min(var(--maxWidth), 100% - var(--sectionPd));
+  margin: auto;
 }

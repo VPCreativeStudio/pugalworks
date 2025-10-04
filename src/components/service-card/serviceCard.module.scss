@@ -1,0 +1,40 @@
+@use "/src/assets/scss/mixin.scss" as *;
+
+.serviceCard {
+  width: min(var(--maxWidth), 100% - var(--sectionPd));
+  padding: 1.5rem 4rem;
+  margin: 0 auto;
+  background-color: var(--cardClr);
+  border-radius: var(--rd-24);
+  box-shadow: var(--cardShadow);
+  @include flex-element;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .serviceHeader {
+    @include flex-element;
+    align-items: baseline;
+    justify-content: space-between;
+
+    h6 {
+      padding: 1rem;
+      background: var(--blackClr);
+      color: var(--primaryClr);
+      border-radius: var(--rd-8);
+    }
+
+    .serviceHeading {
+      @include flex-element;
+      gap: 2rem;
+    }
+    .serviceContent {
+      @include grid-element;
+      gap: 0.75rem;
+    }
+  }
+
+  p {
+    font-size: var(--ft-14);
+    line-height: calc(var(--ft-14) * 1.4);
+  }
+}
